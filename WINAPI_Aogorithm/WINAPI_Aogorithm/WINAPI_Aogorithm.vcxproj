@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8e729ff3-9dba-4885-a0ed-ff31fd9231fb}</ProjectGuid>
-    <RootNamespace>WINAPIAlgorithm</RootNamespace>
+    <ProjectGuid>{8aec8650-772f-49ce-ae8d-3d1ed7be0bc3}</ProjectGuid>
+    <RootNamespace>WINAPIAogorithm</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,29 +147,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Scene\LineScene.h" />
-    <ClInclude Include="Scene\CollisionScene.h" />
     <ClInclude Include="Framework\Circle.h" />
     <ClInclude Include="Framework\Rect.h" />
-    <ClInclude Include="Framework\LineTo.h" />
     <ClInclude Include="Scene\Scene.h" />
-    <ClInclude Include="Scene\PaintScene.h" />
+    <ClInclude Include="Scene\paintScene.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Program\Program.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Framework\Vector2.h" />
-    <ClInclude Include="Types.h" />
-    <ClInclude Include="WINAPI_Algorithm.h" />
+    <ClInclude Include="WINAPI_Aogorithm.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Scene\LineScene.cpp" />
-    <ClCompile Include="Scene\CollisionScene.cpp" />
     <ClCompile Include="Framework\Circle.cpp" />
     <ClCompile Include="Framework\Rect.cpp" />
-    <ClCompile Include="Framework\LineTo.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
-    <ClCompile Include="Scene\PaintScene.cpp" />
+    <ClCompile Include="Scene\paintScene.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
@@ -182,14 +175,14 @@
     </ClCompile>
     <ClCompile Include="Program\Program.cpp" />
     <ClCompile Include="Framework\Vector2.cpp" />
-    <ClCompile Include="WINAPI_Algorithm.cpp" />
+    <ClCompile Include="WINAPI_Aogorithm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WINAPI_Algorithm.rc" />
+    <ResourceCompile Include="WINAPI_Aogorithm.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico" />
-    <Image Include="WINAPI_Algorithm.ico" />
+    <Image Include="WINAPI_Aogorithm.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

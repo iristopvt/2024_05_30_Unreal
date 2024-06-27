@@ -21,7 +21,7 @@
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="WINAPI_Algorithm.h">
+    <ClInclude Include="WINAPI_Aogorithm.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Program\Program.h">
@@ -30,7 +30,7 @@
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\PaintScene.h">
+    <ClInclude Include="Scene\paintScene.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Scene\Scene.h">
@@ -45,21 +45,9 @@
     <ClInclude Include="Framework\Circle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\LineTo.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Types.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\CollisionScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\LineScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WINAPI_Algorithm.cpp">
+    <ClCompile Include="WINAPI_Aogorithm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Program\Program.cpp">
@@ -68,7 +56,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\PaintScene.cpp">
+    <ClCompile Include="Scene\paintScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Scene\Scene.cpp">
@@ -83,18 +71,9 @@
     <ClCompile Include="Framework\Circle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\LineTo.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\CollisionScene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\LineScene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WINAPI_Algorithm.rc">
+    <ResourceCompile Include="WINAPI_Aogorithm.rc">
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -102,7 +81,7 @@
     <Image Include="small.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="WINAPI_Algorithm.ico">
+    <Image Include="WINAPI_Aogorithm.ico">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

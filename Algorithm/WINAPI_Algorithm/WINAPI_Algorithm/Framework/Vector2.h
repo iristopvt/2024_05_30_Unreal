@@ -79,11 +79,19 @@ public:
 	}
 
 	float Length() const;
+	float Distance(Vector2 other) const;
 	
 
 	void Normalize(); // 벡터를 단위 벡터로 만드는 과정? 
 
 	Vector2 NormalVector2(); // 벡터를 정규화한 벡터를 반환? 
+
+	void aw()
+	{
+
+	}
+
+	float initialArea();
 
 	float _x;
 	float _y;

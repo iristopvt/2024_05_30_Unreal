@@ -1,8 +1,8 @@
-﻿// WINAPI_Algorithm.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+﻿// WINAPI_Aogorithm.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
 #include "pch.h"
-#include "WINAPI_Algorithm.h"
+#include "WINAPI_Aogorithm.h"
 
 #define MAX_LOADSTRING 100
 
@@ -11,7 +11,7 @@ HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
-Vector2 mousePos;
+
 shared_ptr<Program> program;
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
@@ -32,7 +32,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_WINAPIALGORITHM, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_WINAPIAOGORITHM, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // 애플리케이션 초기화를 수행합니다:
@@ -41,7 +41,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPIALGORITHM));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPIAOGORITHM));
 
     MSG msg;
 
@@ -76,10 +76,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPIALGORITHM));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPIAOGORITHM));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_WINAPIALGORITHM);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_WINAPIAOGORITHM);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -136,11 +136,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_CREATE:
     {
+       
+      //  shared_ptr<Program> program;
         program = make_shared<Program>();
-        SetTimer(hWnd,1,1,nullptr); // 0.01초마다 WM_TIMER 메시지를 보낸다.
+        SetTimer(hWnd,1,1,nullptr); // 0.01초 마다 WM_TIMER 메세지를 보낸다.
     }
     break;
-
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
@@ -158,27 +159,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+
     case WM_TIMER:
     {
         program->Update();
-        InvalidateRect(hWnd, nullptr, true); // WM_PAINT 메시지와 관련된 얘
+        InvalidateRect(hWnd, nullptr, true); // WM_PAINT  메시지와 관련된 애 
     }
     break;
-
-    case WM_MOUSEMOVE:
-    {
-        mousePos._x = static_cast<float>(LOWORD(lParam));
-        mousePos._y = static_cast<float>(HIWORD(lParam));
-    }
-    break;
-
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
             // device context handle => 연출감독
-            // => 그릴 때 무조건 필요한 객체
+            // => 그릴 때 무조건 필요한 객체 
             HDC hdc = BeginPaint(hWnd, &ps);
 
+         
             program->Render(hdc);
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);

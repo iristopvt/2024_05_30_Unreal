@@ -1,16 +1,16 @@
 #pragma once
 
 #include "targetver.h"
-#define WIN32_LEAN_AND_MEAN             // ê±°ì˜ ì‚¬ìš©ë˜ì§€ ì•ŠëŠ” ë‚´ìš©ì„ Windows í—¤ë”ì—ì„œ ì œì™¸í•©ë‹ˆë‹¤.
-// Windows í—¤ë” íŒŒì¼
+#define WIN32_LEAN_AND_MEAN             // °ÅÀÇ »ç¿ëµÇÁö ¾Ê´Â ³»¿ëÀ» Windows Çì´õ¿¡¼­ Á¦¿ÜÇÕ´Ï´Ù.
+// Windows Çì´õ ÆÄÀÏ
 #include <windows.h>
-// C ëŸ°íƒ€ì„ í—¤ë” íŒŒì¼ì…ë‹ˆë‹¤.
+// C ·±Å¸ÀÓ Çì´õ ÆÄÀÏÀÔ´Ï´Ù.
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
 
-#include <cmath>
+
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
@@ -18,22 +18,16 @@
 
 using namespace std;
 
-#include "Types.h"
-
-// FrameWork
+// FramWork
 #include "Framework/Vector2.h"
 #include "Framework/Rect.h"
 #include "Framework/Circle.h"
-#include "Framework/LineTo.h"
 
 
 // Program
 #include "Program/Program.h"
 
+
 // Scene
 #include "Scene/Scene.h"
-#include "Scene/PaintScene.h"
-
-
-extern Vector2 mousePos;
-
+#include "Scene/paintScene.h"
