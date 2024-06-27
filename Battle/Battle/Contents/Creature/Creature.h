@@ -14,6 +14,7 @@ public:
 	virtual void Attack(shared_ptr<Creature> other) abstract;
 
 	virtual void TakeDamage(int amount, Creature* attacker = nullptr);
+	virtual void TakeDamage(int amount, shared_ptr<Creature> attacker = nullptr);
 
 	bool IsDead();
 

@@ -6,7 +6,7 @@
 #include "Scene/LineScene.h"
 Program::Program()
 {
-	_scene = make_shared<LineScene>(); // make_shared 안에 있는걸 
+	_scene = make_shared<CollisionScene>(); // make_shared 안에 있는걸 
 	//PaintScene나 CollisionScene로 바꾸면 다른게 실행됨
 }
 

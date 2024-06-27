@@ -18,7 +18,7 @@ void HopGoblin::Attack_Hop()
 
 	for (auto player : players_for_attack)
 	{
-		player->TakeDamage(_atk);
+		player->TakeDamage(_atk, this);
 	}
 }
 

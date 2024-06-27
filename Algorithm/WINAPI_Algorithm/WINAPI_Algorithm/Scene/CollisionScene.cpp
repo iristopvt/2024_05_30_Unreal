@@ -19,9 +19,9 @@ void CollisionScene::Update()
 {
 	_circle1->Update();
 	_moveCircle->Update();
-	//_moveCircle->_center = mousePos;
+	_moveCircle->_center = mousePos;
 	//_moveRect->
-	_moveRect->_center = mousePos;
+	//_moveRect->_center = mousePos;
 	_rect1->Update();
 	_moveRect->Update();
 
@@ -35,14 +35,14 @@ void CollisionScene::Update()
 		_circle1->SetGreen();
 	}
 
-	// 사각형 원
-	if (_rect1->Iscollision(mousePos))
+	// 사각형 원 ...과제
+	if (_moveCircle->IsCollision(_rect1))
 	{
-		_rect1->SetRed();
+		_moveCircle->SetRed();
 	}
 	else
 	{
-		_rect1->SetGreen();
+		_moveCircle->SetGreen();
 
 	}
 

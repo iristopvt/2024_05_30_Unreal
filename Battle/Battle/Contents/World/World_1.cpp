@@ -15,8 +15,7 @@ World_1::World_1()
 
 World_1::~World_1()
 {
-	_player1 =make_shared< Creature>();
-	_player2 =make_shared< Creature>();
+	
 }
 
 void World_1::CreatePlayer()
@@ -29,14 +28,14 @@ void World_1::CreatePlayer()
 	switch (input)
 	{
 	case 1:
-		//_player1 = new Knight(name, 5000, 30);
-		shared_ptr<Creature> _player1 = make_shared<Knight>(name, 5000, 30);
-		shared_ptr<Creature> _player1 = std::make_shared<Knight>(name, 5000, 30);
+	
+		_player1 = make_shared<Knight>(name, 5000, 30);
+
 		break;
 	case 2:
-		//_player1 = new Archer(name , 1000, 60);
-		//_player1 = make_shared<Archer>(name, 5000, 30);
-		shared_ptr<Creature> _player1 = std::make_shared<Archer>(name, 5000, 30);
+	
+		_player1 = make_shared<Archer>(name, 1000, 60);
+
 		break;
 	default:
 		break;

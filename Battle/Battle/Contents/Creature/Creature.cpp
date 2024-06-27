@@ -2,7 +2,7 @@
 #include "Creature.h"
 
 Creature::Creature(string name, int hp, int atk)
-: _name(name), _curHp(hp), _atk(atk), _maxHp(hp)
+	: _name(name), _curHp(hp), _atk(atk), _maxHp(hp)
 {
 }
 
@@ -55,6 +55,26 @@ void Creature::TakeDamage(int amount, Creature* attacker)
 	PrintInfo();
 }
 
+void Creature::TakeDamage(int amount, shared_ptr<Creature> attacker)
+{
+	_curHp -= amount;
+
+	if (attacker != nullptr && dynamic_cast<Monster*>(this) != nullptr)
+	{
+		shared_ptr<Player> p = dynamic_pointer_cast<Player>(attacker);
+		if (p != nullptr && this->IsDead())
+		{
+			p->GainExp(_maxHp);
+			p->LevelUp();
+		}
+	}
+
+	if (_curHp < 0)
+		_curHp = 0;
+
+	PrintInfo();
+}
+
 bool Creature::IsDead()
 {
 	if (_curHp <= 0)
@@ -65,3 +85,4 @@ bool Creature::IsDead()
 
 	return false;
 }
+

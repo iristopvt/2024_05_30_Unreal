@@ -62,16 +62,26 @@ bool CircleCollider::IsCollision(shared_ptr<RectCollider> other)
 
 	//float distance = _center.Distance(other->_center);
 
-	float raLeft = other->Left() + _radlian; 
-	float raRight = other->Right() + _radlian;
-	float raTop = other->Top() + _radlian;
-	float raBottom = other->Bottom() + _radlian;
+	float raLeft = other->Left() ; 
+	float raRight = other->Right();
+	float raTop = other->Top();
+	float raBottom = other->Bottom();
 
 
-	if (_radlian < raLeft || _radlian > raRight)
+	//if (_center._x > raLeft || _center._x < raRight &&_center._y > raTop || _center._y < raBottom)
+	//{
+	//	return true;
+	//}
+
+	if (_center._x > raLeft && _center._x < raRight &&
+		_center._y > raTop && _center._y < raBottom)
+	{
 		return true;
-	if (_radlian < raTop || _radlian > raBottom)
-		return true;
+	}
+	if (raRight < _center._x - _radlian || raLeft > _center._x + _radlian)
+		return false;
+	if (raBottom < _center._y - _radlian || raTop> _center._y + _radlian)
+		return false;
 
 	return false;
 	//return false;

@@ -13,7 +13,7 @@ int main()
 	{
 		world->Battle();
 
-		if(world->End())
+		if (world->End())
 			break;
 	}
 

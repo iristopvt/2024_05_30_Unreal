@@ -2,7 +2,7 @@
 #include "Knight.h"
 
 Knight::Knight(string name, int hp, int atk)
-: Player(name, hp, atk)
+	: Player(name, hp, atk)
 {
 }
 
