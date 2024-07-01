@@ -58,6 +58,26 @@ bool CircleCollider::IsCollision(shared_ptr<RectCollider> other)
 {
 	// 과제
 
+	/*Vector2 cirCenter = _center;
+	float radius = _radlian;
+
+	Vector2 reCtenter = other->_center;
+	Vector2 rectHalfsize = other->_halfSize;
+
+	if (cirCenter._x < other->Right() && cirCenter._x > other->Left())
+	{
+		
+			Vector2 newHalfsize = Vector2(rectHalfsize._x + radius, rectHalfsize._y + radius);
+			shared_ptr<RectCollider> newrect = make_shared<RectCollider>(other->_center, newHalfsize);
+			
+			if (newrect.IsCollision(cirCenter)
+			{
+
+			}
+		
+	}*/
+
+
 	// AABB(회전하지 않는다는 조건), OBB(회전이 가능하다)
 
 	//float distance = _center.Distance(other->_center);

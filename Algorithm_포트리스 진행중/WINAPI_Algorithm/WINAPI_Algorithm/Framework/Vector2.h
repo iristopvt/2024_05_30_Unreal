@@ -51,6 +51,22 @@ public:
 		return (*this);
 	}
 
+	Vector2& operator+=(const Vector2& other)
+	{
+		this->_x += other._x;
+		this->_y += other._y;
+
+		return (*this);
+	}
+
+	Vector2& operator-=(const Vector2& other)
+	{
+		this->_x -= other._x;
+		this->_y -= other._y;
+
+		return (*this);
+	}
+
 	Vector2 operator++(int)
 	{
 		Vector2 result = *this;
@@ -80,15 +96,13 @@ public:
 
 	float Length() const;
 	float Distance(Vector2 other) const;
-	
+	float Angle() const;
 
-	void Normalize(); // 벡터를 단위 벡터로 만드는 과정? 
+	void Normalize();
 
-	Vector2 NormalVector2(); // 벡터를 정규화한 벡터를 반환? 
+	Vector2 NormalVector2();
 
 	bool IsBetween(Vector2 v1, Vector2 v2);
-
-	float initialArea();
 
 	float _x;
 	float _y;
