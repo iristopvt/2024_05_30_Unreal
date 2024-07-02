@@ -11,10 +11,10 @@ public:
 	void Update();
 	void Render(HDC hdc);
 
-	void Fire(Vector2 startpos,Vector2 direction);
+	void Fire(Vector2 startpos,Vector2 direction);  // 총알 발사
 
-	void SetActive(bool isActive);
-	bool ISActive() {return _isActive; }
+	void SetActive(bool isActive); // 총알 활성화/비활성화 설정
+	bool ISActive() {return _isActive; }// 총알 활성화 여부 확인
 
 	bool IsOut();
 	void OutControll();
@@ -24,13 +24,13 @@ public:
 	
 	// Attack 2 
 	void Attack_cannon();
-	void SetTarget(shared_ptr<Cannon> cannon) { _target = cannon; }
+	void SetTarget(shared_ptr<Cannon> cannon) { _target = cannon; } // 
 
 private:
 	bool _isActive = false;
-	shared_ptr<Collider> _col;
-	Vector2 _direction = Vector2(1,0);
-	float _speed = 7.0f;
+	shared_ptr<Collider> _col; // 총알 충돌체
+	Vector2 _direction = Vector2(1,0); // 총알 방향 
+	float _speed = 7.0f; // 
 
 	Vector2 _downVector = Vector2();
 

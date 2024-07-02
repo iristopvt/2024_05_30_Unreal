@@ -12,6 +12,8 @@
 #define GREEN			RGB(0,255,0)
 #define BLUE			RGB(0,0,255)
 #define WHITE			RGB(255,255,255)
+#define BLACK			RGB(0,0,0)
+
 
 #define PANTON			RGB(255,103,32)
 #define SKYCOLOR		RGB(123,196,196)

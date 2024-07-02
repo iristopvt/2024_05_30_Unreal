@@ -133,16 +133,26 @@ void Bullet::Attack_connom(shared_ptr<class Cannon> cannon)
 
 void Bullet::Attack_cannon() //캐논 공격부분 
 {
-	if (_target.expired() == false)
-	{
-		shared_ptr<Cannon> targetCannon = _target.lock();
-		shared_ptr<Collider> targetcannon1 = targetCannon->GetCollider();
-		if (/*_target.lock()->GetCollider()->IsCollision(_col)*/
-			targetcannon1->IsCollision(_col))
-		{
-			targetCannon->TakeDamage(); // 공격후 데미지 입는것 
-			SetActive(false);
+	//if (_target.expired() == false)
+	//{
+	//	shared_ptr<Cannon> targetCannon = _target.lock();
+	//	shared_ptr<Collider> targetcannon1 = targetCannon->GetCollider();
+	//	if (/*_target.lock()->GetCollider()->IsCollision(_col)*/
+	//		targetcannon1->IsCollision(_col))
+	//	{
+	//		targetCannon->TakeDamage(); // 공격후 데미지 입는것 
+	//		SetActive(false);
+	//	}
+	//}
+
+	if (!_target.expired()) {
+		auto targetCannon = _target.lock();
+		auto targetCollider = targetCannon->GetCollider();
+		if (targetCollider->IsCollision(_col)) {
+			targetCannon->TakeDamage(); // 충돌 시 데미지 처리
+			SetActive(false); // 총알 비활성화
 		}
 	}
+
 
 }
