@@ -4,7 +4,7 @@
 Collider::Collider(Vector2 center)
 : _center(center)
 {
-	_pens.push_back(CreatePen(PS_SOLID, 3, BLACK)); // 원 테두리 색 변환 
+	_pens.push_back(CreatePen(PS_SOLID, 3, BLACK)); //  테두리 색 변환 
 	_pens.push_back(CreatePen(PS_SOLID, 3, RED));
 
 	SetColor(GREEN_COLOR);
