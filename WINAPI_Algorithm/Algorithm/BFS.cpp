@@ -55,9 +55,27 @@ void CreateGraph_AdjacentMatrix()
 	adjacent[6][4] = true;
 	adjacent[6][6] = true;
 }
+//struct map
+//{
+//	float _x;
+//	float _y;
+//	map() : _x(0), _y(0) {}
+//
+//	static map frontpos[4];
+//};
+
 
 void BFS(int start)
 {
+	//map map;
+	//map.frontpos[4] =
+	//{
+	//		map {0,-1}, // UP
+	//	map {-1,0}, // LEFT
+	//	map {0,1}, // BOTTOM
+	//	map {1,0}, // RIGHT
+	//};
+
 	int N = adjacent.size();
 	discovered[start] = true;
 	parent[start] = start;
@@ -66,6 +84,7 @@ void BFS(int start)
 
 	queue<int> q;
 	q.push(start);
+	
 
 	while (true)
 	{
@@ -89,6 +108,7 @@ void BFS(int start)
 	}
 }
 
+
 int edgeCount(int start, int dest)
 {
 // start 0
@@ -105,6 +125,7 @@ int edgeCount(int start, int dest)
 
 	return result;
 }
+//vector<vector<int>> costs;
 
 int main()
 {

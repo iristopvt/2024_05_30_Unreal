@@ -107,6 +107,8 @@ public:
 
 	bool IsBetween(Vector2 v1, Vector2 v2);
 
+	int MangattanDistance(Vector2 other);
+
 	float _x;
 	float _y;
 };
