@@ -24,6 +24,7 @@ using namespace std;
 #include "Types.h"
 
 // FrameWork
+#include "Framework/DisJointSet.h"
 #include "Framework/Vector2.h"
 #include "Framework/Line.h"
 #include "Framework/Collider.h"
