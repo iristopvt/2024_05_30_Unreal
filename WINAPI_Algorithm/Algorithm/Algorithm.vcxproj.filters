@@ -51,7 +51,13 @@
     <ClCompile Include="Babblingcpp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test2.cpp">
+    <ClCompile Include="Quicksort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mergesort .cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cotdingtest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

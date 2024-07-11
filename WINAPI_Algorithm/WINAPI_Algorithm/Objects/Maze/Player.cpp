@@ -16,8 +16,8 @@ Player::~Player()
 
 void Player::BeginPlay()
 {
-	_maze->SetPlayerPos(_pos);
 	_pos = _maze->GetStartPos();
+	_maze->SetPlayerPos(_pos);
 
 	_visited = vector<vector<bool>>(MAXCOUNT_Y, vector<bool>(MAXCOUNT_X, false));
 	Astart(_pos, _maze->GetEndPos());
@@ -464,10 +464,12 @@ void Player::Update()
 		_pathIndex = 0;
 		_path.clear();
 
+		_maze->CreateMaze_Kruskal();
+		BeginPlay();
 		return ;
 	}
 
-	_time += 0.1f;
+	_time += 0.5f;
 	if (_time > 1.0f)
 	{
 		_time = 0.0f;
