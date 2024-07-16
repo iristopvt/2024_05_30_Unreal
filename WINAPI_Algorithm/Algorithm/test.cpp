@@ -1,10 +1,10 @@
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <iostream>
-#include <queue>
-
-using namespace std;
+//#include <string>
+//#include <vector>
+//#include <algorithm>
+//#include <iostream>
+//#include <queue>
+//
+//using namespace std;
 //class DisJointSet
 //{
 //public:
@@ -124,27 +124,27 @@ using namespace std;
 //    return answer;
 //}
 
-#include<vector>
-#include <queue>
-#include <algorithm>
-
-using namespace std;
-
-struct Vector2
-{
-    Vector2() {}
-    Vector2(int y, int x) : y(y), x(x) {}
-
-    int y = 0;
-    int x = 0;
-
-    bool operator==(const Vector2& other)
-    {
-        if (y != other.y) return false;
-        if (x != other.x) return false;
-
-        return true;
-    }
+//#include<vector>
+//#include <queue>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//struct Vector2
+//{
+//    Vector2() {}
+//    Vector2(int y, int x) : y(y), x(x) {}
+//
+//    int y = 0;
+//    int x = 0;
+//
+//    bool operator==(const Vector2& other)
+//    {
+//        if (y != other.y) return false;
+//        if (x != other.x) return false;
+//
+//        return true;
+//    }
    /* Vector2 operator+(const Vector2& other)
     {
         Vector2 result = *this;
@@ -152,68 +152,68 @@ struct Vector2
 
         return result;
     }*/
-};
+//};
 
-Vector2 dir[4] =
-{
-    {1,0},
-    {-1,0},
-    {0,1},
-    {0,-1}
-};
-
-vector<vector<bool>> discovered;
-vector<vector<Vector2>> parent;
-vector<vector<int>> adjacent;
-int n, m = 0;
-
-bool Cango(Vector2 pos)
-{
-    if (pos.x < 0 || pos.x >= n)
-        return false;
-    if (pos.y < 0 || pos.y >= m)
-        return false;
-
-    if (adjacent[pos.y][pos.x] == 0)
-        return false;
-
-    return true;
-}
-
-void BFS(Vector2 start)
-{
-    discovered[start.y][start.x] = true;
-    parent[start.y][start.x] = start;
-
-    queue<Vector2> q;
-    q.push(start);
-
-    while (true)
-    {
-        if (q.empty()) break;
-
-        Vector2 here = q.front();
-        q.pop();
-
-        for (int i = 0; i < 4; i++)
-        {
-           // Vector2 there = here + dir[i];
-           Vector2 there;
-           there.y = here.y + dir[i].y;
-           there.x = here.x + dir[i].x;
-
-           if (!Cango(there))
-               continue;
-           if (discovered[there.y][there.x] == true)
-               continue;
-
-           q.push(there);
-           discovered[there.y][there.x] = true;
-           parent[there.y][there.x] = here;
-
-        }
-
-    }
+//Vector2 dir[4] =
+//{
+//    {1,0},
+//    {-1,0},
+//    {0,1},
+//    {0,-1}
+//};
+//
+//vector<vector<bool>> discovered;
+//vector<vector<Vector2>> parent;
+//vector<vector<int>> adjacent;
+//int n, m = 0;
+//
+//bool Cango(Vector2 pos)
+//{
+//    if (pos.x < 0 || pos.x >= n)
+//        return false;
+//    if (pos.y < 0 || pos.y >= m)
+//        return false;
+//
+//    if (adjacent[pos.y][pos.x] == 0)
+//        return false;
+//
+//    return true;
+//}
+//
+//void BFS(Vector2 start)
+//{
+//    discovered[start.y][start.x] = true;
+//    parent[start.y][start.x] = start;
+//
+//    queue<Vector2> q;
+//    q.push(start);
+//
+//    while (true)
+//    {
+//        if (q.empty()) break;
+//
+//        Vector2 here = q.front();
+//        q.pop();
+//
+//        for (int i = 0; i < 4; i++)
+//        {
+//           // Vector2 there = here + dir[i];
+//           Vector2 there;
+//           there.y = here.y + dir[i].y;
+//           there.x = here.x + dir[i].x;
+//
+//           if (!Cango(there))
+//               continue;
+//           if (discovered[there.y][there.x] == true)
+//               continue;
+//
+//           q.push(there);
+//           discovered[there.y][there.x] = true;
+//           parent[there.y][there.x] = here;
+//
+//        }
+//
+//    }
 
 
  /*   discovered[start.y][start.x] = true;
@@ -246,43 +246,43 @@ void BFS(Vector2 start)
             parent[there.y][there.x] = here;
         }
     }*/
-}
+//}
 
-int solution(vector<vector<int> > maps)
-{
-    int answer = 1;
-    m = maps.size();
-    n = maps[0].size();
-
-    discovered = vector<vector<bool>>(m, vector<bool>(n, false));
-    parent = vector<vector<Vector2>>(m, vector<Vector2>(n, { -1,-1 }));
-    adjacent = maps;
-
-    BFS({ 0,0 });
-
-    Vector2 end = { m - 1, n - 1 };
-    while (true)
-    {
-        if (parent[end.y][end.x] == Vector2(-1, -1))
-            return -1;
-
-        if (parent[end.y][end.x] == end)
-            break;
-
-        end = parent[end.y][end.x];
-        answer++;
-    }
-
-    return answer;
-}
-
-
-
-
-int answer = 0;
-//vector<bool> visited;
-vector<int> arr;
-int maTarget = 0;
+//int solution(vector<vector<int> > maps)
+//{
+//    int answer = 1;
+//    m = maps.size();
+//    n = maps[0].size();
+//
+//    discovered = vector<vector<bool>>(m, vector<bool>(n, false));
+//    parent = vector<vector<Vector2>>(m, vector<Vector2>(n, { -1,-1 }));
+//    adjacent = maps;
+//
+//    BFS({ 0,0 });
+//
+//    Vector2 end = { m - 1, n - 1 };
+//    while (true)
+//    {
+//        if (parent[end.y][end.x] == Vector2(-1, -1))
+//            return -1;
+//
+//        if (parent[end.y][end.x] == end)
+//            break;
+//
+//        end = parent[end.y][end.x];
+//        answer++;
+//    }
+//
+//    return answer;
+//}
+//
+//
+//
+//
+//int answer = 0;
+////vector<bool> visited;
+//vector<int> arr;
+//int maTarget = 0;
 
 //void DFS(int sum,int index)
 //{
@@ -385,3 +385,106 @@ int maTarget = 0;
 //
 //
 //}
+
+// 해쉬 테이블 - 완주하지 못한 선수
+//#include <string>
+//#include <vector>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//string solution(vector<string> participant, vector<string> completion) 
+//{
+//    string answer = "";
+//
+//   // sort(completion.begin(), completion.end());
+//   
+//    participant.insert(participant.end(), completion.begin(), completion.end());
+//    sort(participant.begin(), participant.end());
+//    //participant.erase(unique(participant.begin(),participant.end(),participant.end()));
+//    participant.erase(unique(participant.begin(), participant.end()), participant.end()); // 동명이인 때문에 문제가 생김 
+//
+//
+//    for (int i = 0; i < completion.size(); i++)
+//    {
+//        if (participant[i] != completion[i])
+//        {
+//            return participant[i];
+//
+//        }
+//    }
+//
+//    return participant.back();
+//
+//}
+
+// 해쉬 테이블 - 베스트 앨범 
+//#include <string>
+//#include <vector>
+//#include <algorithm>
+//using namespace std;
+//
+//vector<int> solution(vector<string> genres, vector<int> plays) 
+//{
+//    vector<int> answer;
+//    int num = plays.size();
+//    genres.insert(genres.end(), plays.begin(), plays.end()); // +5
+//
+//
+//    for (int i = 0; i < num; i++)
+//    {
+//        genres[i] = plays[i+num];
+//
+//
+//        
+//    }
+//
+//
+//    return answer;
+//}
+
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <set>
+using namespace std;
+
+bool chk(int n)
+{
+    if (n == 0 || n == 1) return false;
+
+    else if ((n & 2) == 0)
+    {
+        return false;
+    }
+ 
+    return true;
+}
+
+int solution(string numbers) 
+{
+    int answer = 0;
+    sort(numbers.begin(), numbers.end());
+    set<int> a;
+
+    do
+    {
+        for (int i = 0; i < numbers.size(); i++)
+        {
+            int num = stoi(numbers.substr(0, i));
+            if (a.find(num) == a.end()) {
+                a.insert(num);
+                if (num % 2 == 1) {
+                    answer++;
+                }
+            }
+
+        }
+
+    } while (next_permutation(numbers.begin(), numbers.end()));
+
+
+  
+  
+    return answer;
+}
