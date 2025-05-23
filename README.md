@@ -1,6 +1,6 @@
 # 🎓 2024년  개발 수업 종합 정리
 
-2024년 5월부터 진행된 수업은 **프로그래밍 기초부터 실전 팀 프로젝트까지** 폭넓은 기술을 학습하는 데 중점을 두었습니다. 본 저장소는 그 모든 학습 기록과 실습 코드를 구조화하여 정리한 공간입니다.
+2024년 5월부터 진행된 수업은 **프로그래밍 기초부터 실전 팀 프로젝트까지** 폭넓은 기술을 학습하는 데 중점을 두었습니다.
 
 ## 📘 학습 커리큘럼 요약
 
@@ -135,11 +135,11 @@
 
 ### ✅ Unreal Engine 실습 & 팀 프로젝트
 - 언리얼 엔진 사용법, 블루프린트 및 C++ 연동
-- `Team_YPK_UnrealProject`: RPG 장르의 팀 기반 1차 프로젝트  
-  → [🔗 GitHub 링크](https://github.com/iristopvt/Team_YPK_UnrealProject)
+- `YPK_Team_RPG`: RPG 장르의 팀 기반 1차 프로젝트  
+  → [🔗 GitHub 링크](https://github.com/iristopvt/YPK_Team_RPG)
 
-- `Team_YP2K_Prototype`: 보다 확장된 2차 메인 프로젝트로, 인벤토리/전투/퀘스트 시스템 포함  
-  → [🔗 GitHub 링크](https://github.com/iristopvt/Team_YP2K_Prototype)
+- `YP2K_Team_RPG`: 보다 확장된 2차 메인 프로젝트로
+  → [🔗 GitHub 링크](https://github.com/iristopvt/YP2K_Team_RPG)
 
 
 ---
