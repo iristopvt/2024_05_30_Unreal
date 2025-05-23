@@ -1,0 +1,18 @@
+﻿  pch.cpp
+  AccountManager.cpp
+  GameServer.cpp
+C:\Users\zxcvb\Downloads\11\GameServer\GameServer.cpp(12,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  (소스 파일 '/GameServer.cpp'을(를) 컴파일하는 중)
+  
+  GameSession.cpp
+  GameSessionManager.cpp
+  Player.cpp
+  Room.cpp
+  ServerPacketHandler.cpp
+  UserManager.cpp
+  Protocol.pb.cc
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 2284 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  GameServer.vcxproj -> C:\Users\zxcvb\Downloads\11\Binary\Release\GameServer.exe
