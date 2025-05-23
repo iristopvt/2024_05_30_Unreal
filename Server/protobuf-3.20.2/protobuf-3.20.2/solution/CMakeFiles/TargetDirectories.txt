@@ -1,0 +1,6 @@
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/libprotobuf-lite.dir
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/libprotobuf.dir
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/libprotoc.dir
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/protoc.dir
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/ALL_BUILD.dir
+C:/Users/zxcvb/Downloads/Server/protobuf-3.20.2/protobuf-3.20.2/solu/CMakeFiles/ZERO_CHECK.dir
