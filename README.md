@@ -135,6 +135,11 @@
 
 ### ✅ Unreal Engine 실습 & 팀 프로젝트
 - 언리얼 엔진 사용법, 블루프린트 및 C++ 연동
+- `Team_YPK_UnrealProject`: RPG 장르의 팀 기반 1차 프로젝트  
+  → [🔗 GitHub 링크](https://github.com/iristopvt/Team_YPK_UnrealProject)
+
+- `Team_YP2K_Prototype`: 보다 확장된 2차 메인 프로젝트로, 인벤토리/전투/퀘스트 시스템 포함  
+  → [🔗 GitHub 링크](https://github.com/iristopvt/Team_YP2K_Prototype)
 
 
 ---
